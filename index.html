@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Admin Dashboard</title>
 </head>
 <body>
@@ -12,49 +13,68 @@
 
 
         <div class="header">
-            <div class="search">Search Bar</div>
+            <div class="search">
+              <form role="search" id="form">
+                <input type="search" id="query" name="q"
+                 placeholder="Search..."
+                 aria-label="Search through site content">
+                <button><svg viewBox="0 0 1024 1024"><path class="path1" d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z"></path></svg></button>
+              </form>
+            </div>
             <div class="top-profile">
             <ul>
-                <li>bell</li>
-                <li>profile</li>
+                <li><img width="25" src="images/bell.png" alt="bell"></li>
+                <li><img class="smallavatar" src="images/avator.png" alt="pic"></li>
                 <li>name</li>
             </ul>
             </div>
-
-            <div class="profile">
+            
                 <div class="photo">
-                    <img src="#" alt="img">
-                    <p>Hi there, I'm Kale</p>
+                    <img src="images/avator.png" alt="img">
+                    <div class="greeting">
+                      <div>
+                        <p>Hello there,</p>
+                        <p><strong>Kale Kamara(@kale-dev1)</strong></p>
+                      </div>
+                    </div>
                 </div>
                 <div class="profilelinks">
                     <ul>
-                        <li>New</li>
-                        <li>Upload</li>
-                        <li>Share</li>
+                        <li><button>New</button></li>
+                        <li><button>Upload</button></li>
+                        <li><button>Share</button></li>
                     </ul>
-                </div>
+               
             </div>
         </div>
 
 
         <div class="sidebar">
-            <div class="dashphoto">
-                <p><strong>DASHBOARD</strong></p>
-            </div>
+            <div><img src="images/dash.png" alt="dash"></div>
+            <p><strong>DASHBOARD</strong></p>
+            <div><img src="images/home.png" alt="dash"></div>
             <div class="side-content">Home </div>
+            <div><img src="images/account.png" alt="dash"></div>
             <div class="side-content">Profile </div>
+            <div><img src="images/forum.png" alt="dash"></div>
             <div class="side-content">Messages </div>
+            <div><img src="images/history.png" alt="dash"></div>
             <div class="side-content">History </div>
-            <div class="side-content">Tdaks</div>
+            <div><img src="images/calendar.png" alt="dash"></div>
+            <div class="side-content">Tasks</div>
+            <div><img src="images/forum.png" alt="dash"></div>
             <div class="side-content">Communities </div>
+            <div><img src="images/setings.png" alt="dash"></div>
             <div class="side-content">Settings </div>
+            <div><img src="images/help-box.png" alt="dash"></div>
             <div class="side-content">Support </div>
+            <div><img src="images/shield.png" alt="dash"></div>
             <div class="side-content">Privacy</div>
         </div>
 
 
         <div class="article">
-            <p><strong>Your Projects</strong></p>
+            
             <div class="card">
                 <p class="title">Article Title 1</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...</p>
@@ -96,10 +116,11 @@
                 <p class="atitle">Article Title</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...</p>
               </div>
+              
         </div>
 
 
-        <div class="Trending">
+        <div class="trending">
             <p><strong>Trending</strong></p>
             <ul>
                 <li>@tegan</li>
