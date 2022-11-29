@@ -1,34 +1,42 @@
-*{
+html *{
     margin: 0;
     padding: 0;
-   
     
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+   
+}
+:root{
+  --redcolor: #ec6e6e;
 }
 .container{
     background-color: rgb(182, 200, 221);
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 20% 1fr 20%;
     grid-template-rows: 125px 1fr 1fr ;
     gap: 20px;
+    width: 100%;
+    height: 100%;
+    padding-right: 1%;
+ 
+     
     
 
 }
+
+/* Header css */
 
 .header{
     background-color: rgb(240, 242, 245);
     grid-column: 2/4;
     grid-row: 1/2;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 65% 1fr;
+    grid-template-rows: 45% 1fr;
     padding: 20px;
     margin-left: -20px ;
     
 }
-.search{
-    grid-row: 1/2;
-  
-}
+
 
 .smallavatar{
   width: 40px;
@@ -40,18 +48,15 @@
 
 }
 
-.header .top-profile ul {
-  list-style: none;
-  display: flex;
-  margin: 0 20px;
-  justify-content: space-around;
- 
+.top-profile{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr ;
+
+  
 }
 
-.header .top-profile ul li {
-  list-style: none;
- 
-  
+.smallavatar{
+  padding-left: 20px;
 }
 
 .photo{
@@ -62,11 +67,11 @@
 
 .photo img{
   width: 60px;
-  height: 60px;
   border-radius: 50%;
 
   object-fit: cover;
   object-position: center right;
+  margin-right: 15px;
 
 }
 
@@ -74,13 +79,13 @@
     list-style: none;
     grid-column: 2/3;
     grid-row: 2/3;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     
         
 }
 
 .profilelinks ul li{
-  display: inline-flex;
   margin: 0 15px;
  
   
@@ -89,8 +94,8 @@
 
 
 .profilelinks button {
-  width: 100px;
-  background-color: #251e21;
+  width: 100%;
+  background-color: var(--redcolor);
   border-radius: 20px;
   border-style: none;
   box-sizing: border-box;
@@ -118,12 +123,12 @@
 
 .profilelinks button:hover,
 .profilelinks button:focus {
-  background-color: #884d4d;
+  background-color: #669dc2;
 }
 
 form {
   background-color: #fff;
-  width: 80%;
+  width: 85%;
   height: 25px;
   border-radius: 5px;
   display:flex;
@@ -161,28 +166,48 @@ svg {
 
 
 
-/* Dashboard */
+/* Sidebar */
 
 .sidebar{
     background-color: rgb(151, 186, 231);
     grid-column: 1/2;
     grid-row: 1/4;
     display: grid;
-    grid-template-rows: repeat(10fr);
     grid-template-columns: 30% 1fr;
     justify-content: space-around;
+    padding-bottom: 50%;
+    padding-top: 50px;
     
 }
 
-.sidebar div img{
+.sidebar img{
     height: 20px;
     width: 20px;
     padding-left: 30%;
+    
     
 }
 .sidecontent{
   justify-content: center;
   align-items: center;
+}
+
+.sidebar div{
+  padding-top: 5%;
+  font-size: 1.5rem
+}
+
+.sidebar .dash{
+  height: 45px;
+  width: 45px;
+  color: var(--redcolor);
+}
+
+.sidebar p{
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
 }
 
 /* Main */
@@ -191,16 +216,24 @@ svg {
     grid-column: 2/3;
     grid-row: 2/4;
     display: grid;
-    grid-template-columns:  repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-rows: 25px 1fr;
     gap: 15px;
+    
    
+  } 
+  .article .proj{
+    grid-row: 1/2;
+    grid-column: 1/3;
+    font-weight: 900;
+    font-size: 30px;
+    color: #ec6e6e;
   }
-  
   .article p {
     font-size: 18px;
     font-family: sans-serif;
     color: rgb(221, 221, 221);
-    text-align: left;
+    text-align: center;
   }
   
   .article .card {
@@ -208,17 +241,24 @@ svg {
     color: black;
     text-align: center;
     height: 200px;
+    border-left: solid var(--redcolor) 10px;
+    border-radius: 20px 20px;
+    
+   
   }
   
   .card p {
     color: black;
     font-weight: normal;
     font-size: 14px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
   
   .card .title {
     font-size: 18px;
     text-align: center;
+    font-weight: 600;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
 
   /* announcements */
@@ -226,6 +266,7 @@ svg {
   .announcements{
     grid-column: 3/4;
     grid-row: 2/3;
+    margin-right: 25px;
     
   }
   .announcements p {
@@ -253,9 +294,11 @@ svg {
   }
 
   .trending{
-    background-color: darkcyan;
+    background-color: rgb(255, 255, 255);
     grid-column: 3/4;
     grid-row: 3/4;
+    margin-right: 25px;
+    list-style: none;
 
   }
 
