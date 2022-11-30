@@ -216,7 +216,7 @@ svg {
     grid-column: 2/3;
     grid-row: 2/4;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: 48% 48%;
     grid-template-rows: 25px 1fr;
     gap: 15px;
     
@@ -267,6 +267,8 @@ svg {
     grid-column: 3/4;
     grid-row: 2/3;
     margin-right: 25px;
+    border-radius: 20px 20px;
+    border: solid;
     
   }
   .announcements p {
@@ -279,7 +281,9 @@ svg {
   .announcements .acard {
     background-color: #FFFFFF;
     color: black;
+    
     text-align: center;
+
   }
   
   .acard p {
@@ -291,6 +295,7 @@ svg {
   .acard .atitle {
     font-size: 14px;
     text-align: center;
+    font-weight: 700;
   }
 
   .trending{
@@ -299,6 +304,12 @@ svg {
     grid-row: 3/4;
     margin-right: 25px;
     list-style: none;
+    border-left: solid var(--redcolor) 10px;
+    border-radius: 20px 20px;
 
   }
+  .trending ul li{
+    list-style: none;
+  }
+
 
